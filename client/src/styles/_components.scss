@@ -1,0 +1,32 @@
+.primary-button {
+  background-color: $primary-color;
+  color: $white;
+  font-size: 16px;
+  border: none;
+  border-radius: $default-radius-pixel;
+  padding: $default-padding;
+}
+.regular-input {
+  border-radius: $default-radius-pixel;
+  display: block;
+  border: 1px solid $gray-secondary;
+  padding: $default-padding;
+  font-size: 14px;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    transition: all 0.3s;
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+        color: $primary-color;
+    }
+  }
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 13px;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/index.scss';
+.default-container {
+    width: 60%;
+    color: $gray;
+    border-radius: $container-border-radius;
+    background-color: $white;
+    padding: 32px;
+
+}
