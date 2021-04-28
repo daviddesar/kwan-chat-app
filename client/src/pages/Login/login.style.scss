@@ -1,13 +1,6 @@
 @import "../../styles/index.scss";
 
 .login {
-  background-color: $primary-color;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   .login__form {
     margin: 28px 0;
     .login-input {

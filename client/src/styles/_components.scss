@@ -5,6 +5,20 @@
   border: none;
   border-radius: $default-radius-pixel;
   padding: $default-padding;
+  cursor: pointer;
+  
+}
+.secondary-button {
+  background-color: white;
+  color: $primary-color;
+  font-size: 16px;
+  border: 1px solid $primary-color;
+  border-radius: $default-radius-pixel;
+  padding: $default-padding;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-color;
+  }
 }
 .regular-input {
   border-radius: $default-radius-pixel;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import ChatRoom from './components/ChatRoom/ChatRoom';
-import Login from './components/Login/Login';
+import ChatRoom from './pages/ChatRoom/ChatRoom';
+import Login from './pages/Login/Login';
 import './styles/index.scss';
 function App() {
   return (

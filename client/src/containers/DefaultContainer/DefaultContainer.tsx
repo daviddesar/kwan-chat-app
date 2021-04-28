@@ -8,7 +8,9 @@ interface IDefaultChildren {
 const DefaultContainer: FC<IDefaultChildren> = ({children}) => {
     return (
         <div className="default-container">
-            {children}
+            <div className="content">
+                {children}
+            </div>
         </div>
     )
 }

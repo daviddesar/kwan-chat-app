@@ -1,9 +1,17 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
+
 .default-container {
-    width: 60%;
+  background-color: $primary-color;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    width: 40%;
     color: $gray;
     border-radius: $container-border-radius;
     background-color: $white;
     padding: 32px;
-
+  }
 }
