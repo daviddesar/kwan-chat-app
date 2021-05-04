@@ -1,30 +1,36 @@
-import React, { FC } from 'react';
-import './chat-message.style.scss'
+import React, { FC } from "react";
+import Emoji from "react-emoji-render";
+import { IMessageInfo } from "../../utils/interfaces";
+import { StringQueryParam } from "../../utils/types";
+import "./chat-message.style.scss";
 
-interface IMessageInfo {
-    message: string,
-    username: string
-}
 type Props = {
-    messageInfo: IMessageInfo
-}
+  messageInfo: IMessageInfo;
+  currentUser: StringQueryParam;
+};
 const ChatMessage: FC<Props> = (props) => {
-    
-    const {username, message} = props.messageInfo;
-    
-    if (username !== null) {
-        return (
-            <div className="other-message">
-                <div className="owner-message">{username}</div>
-                <div className="message-content">{message}</div>
-            </div>
-        )
-    }
+  const { username, message } = props.messageInfo;
+  const currentUser = props.currentUser;
+
+  if (username === "admin") {
+    return <p className="admin-message">{message}</p>;
+  } else if (username !== currentUser) {
     return (
-        <div className="my-message">
-          <div className="message-content"></div>
+      <div className="other-message">
+        <div className="owner-message">{username}</div>
+        <div className="message-content">
+          <Emoji text={message} />
         </div>
-    )
-}
+      </div>
+    );
+  }
+  return (
+    <div className="my-message">
+      <div className="message-content">
+        <Emoji text={message} />
+      </div>
+    </div>
+  );
+};
 
 export default ChatMessage;

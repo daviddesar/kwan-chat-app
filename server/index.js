@@ -18,8 +18,12 @@ io.on('connection', (socket) => {
     console.log("New connection!");
     socket.on('join', ({username, room}, callback) => {
         const user = addUser({username, room});
+        console.log('room: ', room)
         socket.join(room);
-        io.emit('message', { username: 'admin', message: `${user.username}, welcome to room ${user.room}.`});
+        io.emit('message', { username: 'admin', message: `${user.username} joined!`});
+    })
+    socket.on('sendMessage', ({currentMessage, username}) => {
+        io.emit('message', { username, message: currentMessage})
     })
     socket.on('disconnect', () => {
         console.log("User disconnected!")

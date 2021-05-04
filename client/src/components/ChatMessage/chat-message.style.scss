@@ -1,1 +1,36 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
+.other-message {
+  text-align: left;
+  margin: 6px 0;
+  .owner-message {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .message-content {
+    background-color: $gray-secondary;
+    border-radius: $default-radius-pixel;
+    padding: 8px 14px;
+    font-size: 14px;
+    width: fit-content;
+  }
+}
+.admin-message {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.my-message {
+  text-align: right;
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  .message-content {
+    color: $white;
+    background-color: $primary-color;
+    border-radius: $default-radius-pixel;
+    width: fit-content;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}

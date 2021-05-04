@@ -18,6 +18,7 @@
   cursor: pointer;
   &:hover {
     background-color: $primary-color;
+    color: white;
   }
 }
 .regular-input {
